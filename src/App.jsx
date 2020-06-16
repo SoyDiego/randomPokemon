@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "./components/Header";
-import "./styles.css"
+import Pokemon from "./components/Pokemon";
+import "./styles.css";
 
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
-import Pokemon from "./components/Pokemon";
 
 function App() {
 	return (

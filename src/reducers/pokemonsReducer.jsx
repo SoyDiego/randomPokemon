@@ -8,7 +8,8 @@ import {
 
 const initialState = {
     pokemon: {},
-    loading: true,
+	loading: true,
+	error: false,
 };
 
 export default function (state = initialState, action) {
@@ -16,13 +17,20 @@ export default function (state = initialState, action) {
 		case GET_POKEMON:
 			return {
 				...state,
-				loading: action.payload
+				loading: action.payload,
+				error: false
 			}
 		case GET_POKEMON_SUCCESS:
 			return {
 				...state,
 				pokemon: action.pokemon,
 				loading: action.payload
+			}
+		case GET_POKEMON_ERROR:
+			return {
+				...state,
+				loading: false,
+				error: action.payload
 			}
 		default:
 			return state;
