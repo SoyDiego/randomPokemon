@@ -17,20 +17,20 @@ export default function (state = initialState, action) {
 		case GET_POKEMON:
 			return {
 				...state,
-				loading: action.payload,
+				loading: true,
 				error: false
 			}
 		case GET_POKEMON_SUCCESS:
 			return {
 				...state,
-				pokemon: action.pokemon,
-				loading: action.payload
+				pokemon: action.payload,
+				loading: false
 			}
 		case GET_POKEMON_ERROR:
 			return {
 				...state,
 				loading: false,
-				error: action.payload
+				error: true
 			}
 		default:
 			return state;

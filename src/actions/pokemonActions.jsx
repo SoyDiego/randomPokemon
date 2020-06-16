@@ -12,7 +12,6 @@ export function getPokemonActions() {
 			const response = await api.json();
 			dispatch(getPokemonSuccess(response));
 		} catch (error) {
-			console.log(error)
 			dispatch(getPokemonError());
 		}
 	};
@@ -20,16 +19,13 @@ export function getPokemonActions() {
 
 const getPokemon = () => ({
 	type: GET_POKEMON,
-	payload: true,
 });
 
 const getPokemonSuccess = (pokemon) => ({
 	type: GET_POKEMON_SUCCESS,
-	pokemon: pokemon,
-	payload: false,
+	payload: pokemon,
 });
 
-const getPokemonError = (error) => ({
+const getPokemonError = () => ({
 	type: GET_POKEMON_ERROR,
-	payload: true
-})
+});

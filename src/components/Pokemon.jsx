@@ -11,9 +11,9 @@ const Pokemon = () => {
 		dispatch(getPokemonActions());
 	}, [dispatch]);
 
-	const pokemon = useSelector((state) => state.pokemons.pokemon);
-	const loading = useSelector((state) => state.pokemons.loading);
-	const error = useSelector((state) => state.pokemons.error);
+	const pokemon = useSelector((state) => state.pokemon.pokemon);
+	const loading = useSelector((state) => state.pokemon.loading);
+	const error = useSelector((state) => state.pokemon.error);
 
 	if (loading)
 		return (
