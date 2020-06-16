@@ -13,7 +13,7 @@ function App() {
 			<div className="container">
 				<div className="row">
 					<Header />
-					<div className="col-md-12">
+					<div className="col-md-6 d-flex justify-content-center mt-5">
 						<Pokemon />
 					</div>
 				</div>

@@ -30,19 +30,20 @@ const Pokemon = () => {
 	return (
 		<Fragment>
 			<div
-				className="col-xs-12 col-sm-6 col-md-6 col-lg-4 card shadow bg-white border border-primary"
+				className="col-xs-12 card shadow bg-white border border-primary d-flex justify-content-center align-items-center"
 				onClick={() => dispatch(getPokemonActions())}>
-				<p className="text-dark text-center mt-3">
+				<p className="text-dark text-center mt-3 mx-4">
 					click on the card to get other random Pokemon
 				</p>
 				<img
-					className="card-img-top"
+					className="text-center"
 					src={sprites.front_default}
 					alt={name}
+					width="120"
 				/>
 				<div className="card-body text-dark">
 					<h2 className="card-title text-center">{name}</h2>
-					<div className="d-flex justify-content-between py-2">
+					<div className="d-flex justify-content-around py-2">
 						<h5>
 							<span className="font-weight-bold text-primary px-2">
 								Weight:
@@ -57,9 +58,9 @@ const Pokemon = () => {
 						</h5>
 					</div>
 
-					<h3 className="card-title text-center text-primary">
+					<h4 className="card-title text-center text-primary">
 						Types:
-					</h3>
+					</h4>
 					<div className="d-flex justify-content-around text-center">
 						{types.map((type, index) => (
 							<h5 key={index} className="text-center">
